@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 public class ToolLevel : MonoBehaviour
 {
     [HideInInspector]
@@ -60,7 +59,7 @@ public class ToolLevel : MonoBehaviour
         if(Mouse.current.leftButton.wasPressedThisFrame && currentTile != null)
         {
             SelectTile();
-            currentTile.SetType(tileType);
+            currentTile.SetNewType(tileType);
         }
     }
 

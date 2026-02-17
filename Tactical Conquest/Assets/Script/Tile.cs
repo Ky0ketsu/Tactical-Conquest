@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Tile
 {
-    private GridSystem<Tile> _grid;
+    public GridSystem<Tile> _grid;
+    public GridGenerator gridGenerator;
     public TileType type;
     public int x;
     public int z;
@@ -10,6 +11,9 @@ public class Tile
     public bool isActive;
 
     public GameObject tileObject;
+
+    [HideInInspector]
+    public TileVisual tileVisual;
 
     
 
@@ -22,15 +26,28 @@ public class Tile
 
     public TileType GetTileType()
     {
-        if(type == default) SetRandomTileType();
+        if(type == default) SetRandomTileType(true, default);
         return type;
     }
 
-    public void SetRandomTileType()
+    public void SetRandomTileType(bool random, TileType type)
     {
-        TileType type;
+        if(random)
+        {
+            TileType randomType;
 
-        type = (TileType)Random.Range(0, System.Enum.GetValues(typeof(TileType)).Length);
-        this.type = type;
+            randomType = (TileType)Random.Range(0, System.Enum.GetValues(typeof(TileType)).Length);
+            this.type = randomType;
+        }
+        else
+        {
+            this.type = type;
+        }
+    }
+
+    public void SetGraphics()
+    {
+        tileObject.GetComponent<TileVisual>().tile = this;
+        tileObject.GetComponent<TileVisual>().SetTypeOnGenerate(type);
     }
 }

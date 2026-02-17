@@ -2,7 +2,6 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
-
 public class TileVisual : MonoBehaviour, ITile
 {
     [SerializeField]
@@ -33,17 +32,25 @@ public class TileVisual : MonoBehaviour, ITile
         }
     }
 
-    public void SetType(TileType tileType)
+    public void SetNewType(TileType tileType)
     {
-        Debug.Log(tile.type);
-        Debug.Log(tileType);
+        /*Debug.Log(tile.type);
+        Debug.Log(tileType);*/
 
         if (tile.type == tileType) return;
-        if (_graphicsTile[(int)tile.type] != null)
+        if (_graphicsTile[(int)tileType] != null)
 
         DestroyImmediate(_graphics);
-        _graphics = Instantiate(_graphicsTile[(int)tile.type], transform.position, Quaternion.identity);
+        _graphics = Instantiate(_graphicsTile[(int)tileType], transform.position, Quaternion.identity, transform);
         tile.type = tileType;
-        
+
+        int index = tile.x * tile._grid.GridHeight + tile.z;
+        tile.gridGenerator.gridData.tiles[index].type = (int)tileType;
+    }
+
+    public void SetTypeOnGenerate(TileType tileType)
+    {
+        DestroyImmediate(_graphics);
+        _graphics = Instantiate(_graphicsTile[(int)tileType], transform.position, Quaternion.identity, transform);
     }
 }
