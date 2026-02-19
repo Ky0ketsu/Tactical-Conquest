@@ -3,7 +3,7 @@ public enum TileType
     Plains,
     Forest,
     Water,
-    Rock,
-    Ore
-    
+    Montains,
+    Ore,
+    Void
 }
