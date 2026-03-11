@@ -50,12 +50,8 @@ public class GridDataSave : MonoBehaviour
         string json = File.ReadAllText(path);
         GridData grid = JsonUtility.FromJson<GridData>(json);
 
-        /*foreach( TileData tileData in grid.tiles)
-        {
-            Debug.Log($"{tileData.x}, {tileData.z}");
-        }*/
         Debug.Log("aaaaa");
-        transform.GetComponent<GridGenerator>().LoadMap(grid);
+        transform.GetComponent<GridPresetLoader>().LoadMap(grid);
     }
 
 

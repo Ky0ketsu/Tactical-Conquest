@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class PlayerMouseAction : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(Input.GetButtonDown("ClickLeft"))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                if(hit.transform.GetComponent<IClickable>() != null)
+                {
+                    hit.transform.GetComponent<IClickable>().ClickLeft();
+                }
+            }
+        }
     }
 }

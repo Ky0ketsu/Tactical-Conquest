@@ -4,7 +4,13 @@ public class Tile
 {
     public GridSystem<Tile> _grid;
     public GridGenerator gridGenerator;
-    public TileType type;
+
+    public TileType type
+    {
+        get { return type; }
+        set { SetGraphics(); }
+    }
+
     public int x;
     public int z;
 

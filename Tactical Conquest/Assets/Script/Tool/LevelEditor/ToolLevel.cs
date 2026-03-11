@@ -17,13 +17,12 @@ public class ToolLevel : MonoBehaviour
     public void ChangeEditState()
     {
         isEditing = !isEditing;
-        Debug.Log(isEditing);
     }
 
     [HideInInspector]
     TileVisual currentTile;
-    [HideInInspector]
-    Tile currentTileSelected;
+    /*[HideInInspector]
+    Tile currentTileSelected;*/
 
     private void Update()
     {
@@ -58,14 +57,14 @@ public class ToolLevel : MonoBehaviour
 
         if(Mouse.current.leftButton.wasPressedThisFrame && currentTile != null)
         {
-            SelectTile();
+            //SelectTile();
             currentTile.SetNewType(tileType);
         }
     }
 
-    public void SelectTile()
+    /*public void SelectTile()
     {
         currentTileSelected = currentTile.tile;
-    }
+    }*/
     
 }

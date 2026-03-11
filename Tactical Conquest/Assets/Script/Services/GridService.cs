@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class GridService : MonoBehaviour
 {
-
-
-    void Start()
+    void Awake()
     {
         ServicesLocator.RegisterService(this);    
     }
@@ -13,4 +11,6 @@ public class GridService : MonoBehaviour
     {
         ServicesLocator.UnRegisterService(this);
     }
+
+    private GridSystem<Tile> grid;
 }

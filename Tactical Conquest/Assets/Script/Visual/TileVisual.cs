@@ -2,7 +2,7 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TileVisual : MonoBehaviour, ITile
+public class TileVisual : MonoBehaviour, ITile, IClickable
 {
     [SerializeField]
     public Tile tile;
@@ -52,5 +52,11 @@ public class TileVisual : MonoBehaviour, ITile
     {
         DestroyImmediate(_graphics);
         _graphics = Instantiate(_graphicsTile[(int)tileType], transform.position, Quaternion.identity, transform);
+    }
+
+
+    public void ClickLeft()
+    {
+
     }
 }

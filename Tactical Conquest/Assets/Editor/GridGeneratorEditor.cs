@@ -14,16 +14,7 @@ public class GridGeneratorEditor : Editor
 
         if (GUILayout.Button("GENERATE GRID", GUILayout.Height(40)))
         {
-            gridGenerator.GenerateGrid(false);
-
-            /*if (Application.isPlaying)
-            {
-                
-            }
-            else
-            {
-                Debug.LogWarning("Passe en mode play pour Générer la grille");
-            }*/
+            gridGenerator.GenerateNewGrid();
 
         }
 

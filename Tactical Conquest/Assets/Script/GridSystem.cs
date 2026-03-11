@@ -37,11 +37,11 @@ public class GridSystem<TGridObject>
         return new Vector3(x * _sizeOfCell, 0, z * _sizeOfCell * 0.85f) + _originPosition;
     }
 
-    public void GetXY(Vector3 worldPosition, out int x, out int y)
+    /*public void GetXY(Vector3 worldPosition, out int x, out int y)
     {
         x = Mathf.FloorToInt((worldPosition - _originPosition).x /  _sizeOfCell);
         y = Mathf.FloorToInt((worldPosition - _originPosition).y / _sizeOfCell);
-    }
+    }*/
 
     public TGridObject GetGridObject(int x, int z)
     {
