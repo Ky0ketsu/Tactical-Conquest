@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Click" enabled="true" style="bottom: 0; left: 0; position: absolute; right: auto; opacity: 1; display: flex; height: 182px; width: 290px;">
+        <ui:Image tint-color="rgba(22, 26, 26, 0.4)" source="project://database/Resources/unity_builtin_extra?fileID=10305&amp;guid=0000000000000000f000000000000000&amp;type=0#Default-Checker" scale-mode="StretchToFill" style="position: absolute; right: auto; left: 0; bottom: 0; height: 179px; width: 292px;">
+            <ui:Button text="Infantry" name="InfantryButton" style="visibility: visible; overflow: visible; opacity: 1; background-color: rgba(180, 180, 180, 0.3); color: rgb(255, 255, 255); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=523477614ae0d91438cf645966a6d418&amp;type=3#NotInter-Regular&quot;);"/>
+            <ui:Button text="Musketeer" name="MusketeerButton" style="visibility: visible; overflow: visible; opacity: 1; background-color: rgba(180, 180, 180, 0.3); color: rgb(255, 255, 255); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=523477614ae0d91438cf645966a6d418&amp;type=3#NotInter-Regular&quot;);"/>
+            <ui:Button text="Tank" name="TankButton" style="visibility: visible; overflow: visible; opacity: 1; background-color: rgba(180, 180, 180, 0.3); color: rgb(255, 255, 255); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=523477614ae0d91438cf645966a6d418&amp;type=3#NotInter-Regular&quot;);"/>
+        </ui:Image>
+    </ui:VisualElement>
+    <ui:VisualElement name="Overed" enabled="true" style="flex-grow: 1; position: absolute; bottom: 0; left: 0; height: 182px; width: 292px; display: none;">
+        <ui:Image source="project://database/Resources/unity_builtin_extra?fileID=10305&amp;guid=0000000000000000f000000000000000&amp;type=0#Default-Checker" scale-mode="StretchToFill" tint-color="rgba(32, 32, 32, 0.55)" style="flex-grow: 1;"/>
+    </ui:VisualElement>
+</ui:UXML>

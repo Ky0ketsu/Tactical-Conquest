@@ -2,7 +2,7 @@
     <ui:VisualElement style="flex-grow: 1;">
         <ui:Button name="nextTurnButton" text="Next Turn"/>
     </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 1; width: 293px; flex-direction: column-reverse;">
+    <ui:VisualElement style="width: 294px; height: 139px;">
         <ui:Button text="Infantry" name="InfantryButton"/>
         <ui:Button text="Musketeer" name="MusketeerButton"/>
         <ui:Button text="Tank&#10;" name="TankButton"/>

@@ -4,6 +4,10 @@ public class GridPresetLoader : MonoBehaviour
 {
     GridGenerator gridGenerator;
 
+    private void Awake()
+    {
+        gridGenerator = GetComponent<GridGenerator>();
+    }
 
     public void GridLoader(int x, int z)
     {
