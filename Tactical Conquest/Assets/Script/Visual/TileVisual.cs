@@ -53,4 +53,15 @@ public class TileVisual : MonoBehaviour, ITile
         DestroyImmediate(_graphics);
         _graphics = Instantiate(_graphicsTile[(int)tileType], transform.position, Quaternion.identity, transform);
     }
+
+
+    public void Select()
+    {
+        ServicesLocator.GetService<UnitPlacementUI>().OpenMenu(this);
+    }
+
+    public void Attack()
+    {
+        Debug.Log("fight");
+    }
 }
