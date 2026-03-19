@@ -1,16 +1,23 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class GameService : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        ServicesLocator.RegisterService(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        ServicesLocator.UnRegisterService(this);
+    }
+
+    public ClickState CurrentState = ClickState.Idle;
+
+    public void SetState(ClickState newState)
+    {
+        CurrentState = newState;
+        Debug.Log("New State: " + newState);
     }
 }

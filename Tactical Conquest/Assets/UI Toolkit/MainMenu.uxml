@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Button name="nextTurnButton" text="Next Turn"/>
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; width: 293px; flex-direction: column-reverse;">
+        <ui:Button text="Infantry" name="InfantryButton"/>
+        <ui:Button text="Musketeer" name="MusketeerButton"/>
+        <ui:Button text="Tank&#10;" name="TankButton"/>
+    </ui:VisualElement>
+</ui:UXML>

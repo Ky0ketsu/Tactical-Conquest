@@ -2,7 +2,7 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TileVisual : MonoBehaviour, ITile, IClickable
+public class TileVisual : MonoBehaviour, ITile
 {
     [SerializeField]
     public Tile tile;
@@ -55,8 +55,13 @@ public class TileVisual : MonoBehaviour, ITile, IClickable
     }
 
 
-    public void ClickLeft()
+    public void Select()
     {
+        ServicesLocator.GetService<UnitPlacementUI>().OpenMenu(this);
+    }
 
+    public void Attack()
+    {
+        Debug.Log("fight");
     }
 }

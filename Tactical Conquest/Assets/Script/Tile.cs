@@ -56,4 +56,5 @@ public class Tile
         tileObject.GetComponent<TileVisual>().tile = this;
         tileObject.GetComponent<TileVisual>().SetTypeOnGenerate(type);
     }
+
 }

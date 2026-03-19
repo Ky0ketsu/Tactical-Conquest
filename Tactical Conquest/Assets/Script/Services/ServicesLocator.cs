@@ -23,8 +23,6 @@ public static class ServicesLocator
 
     public static TInterface GetService<TInterface>()
     {
-        
-
         return (TInterface)services[typeof(TInterface)];
     }
 
